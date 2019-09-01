@@ -1,5 +1,7 @@
 # EducateAll-Foundation
 
+=======
+
 #Home Page todo
 
 [x] - Get favicon (not logo) from UI/UX for the website page title
@@ -27,4 +29,4 @@
 
 [ ] - Get picture used for team page design from UI/UX team
 
-[ ] - Implement dropdown for team link in the header's navbar
+[ ] - Implement dropdown for team link in the header's navb
