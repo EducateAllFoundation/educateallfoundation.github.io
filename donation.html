@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./styles/donation.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200i,300,400&amp;display=swap" rel="stylesheet">
     <title>Donation</title>
 </head>
 <body>
@@ -17,34 +19,51 @@
     
                 <div class="right">
                     <div><a href="index.html">HOME</a></div>
-                    <div><a href="about.html">ABOUT US</a></div>
-                    <div id="donation-link"><a href="donation.html">DONATIONS</a></div>
+                    <div><a href="About Us Page/about.html">ABOUT US</a></div>
+                    <div id="donation-link"><a href="#">DONATIONS</a></div>
+                    <div><a href="events.html">EVENTS</a></div>
+                    <div><a href="team.html">TEAM</a></div>
                     <div><a href="contact.html">CONTACT US</a></div>
-                    <div><a href="event.html">EVENTS</a></div>
                 </div>
             </div>
             <div class="main">
                 <div class="donationOptions">
                     <h1>Choose a donation amount</h1>
                     <div class="donationOption">
-                        <div><input type="radio" name="amount" value="5" /> <span>₦5</span> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
-                        <div><input type="radio" name="amount" value="10" /> <span>₦10</span> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
-                        <div><input type="radio" name="amount" value="20" /> <span>₦20</span> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
+                        <div><input type="radio" name="amount" value="5" /> <span>₦5</span> <span>Basic Plan.</span></div>
+                        <div><input type="radio" name="amount" value="10" /> <span>₦10</span> <span>Compact Plan.</span></div>
+                        <div><input type="radio" name="amount" value="20" /> <span>₦20</span> <span>Premium plan.</span></div>
                     </div>
                     <div class="donationAmount">
                         <label>Enter a custom amount <input type="text" id="amount"></label>
-                        <label>Enter your email <input type="email" id="email"></label>
-                        <label>Enter your first name <input type="text" id="firstname"></label>
-                        <label>Enter your last name <input type="text" id="lastname"></label>
-                        <label>Enter your phone number <input type="tel" id="phone"></label>
                     </div>
                     <h1>Choose a donation frequency</h1>
                     <div class="donationFrequency">
-                        <div><input type="checkbox" /> <span>Monthly</span></div>
-                        <div><input type="checkbox" /> <span>One Time</span></div>
+                        <div><input type="radio" name="frequency" /> <span>Monthly</span></div>
+                        <div><input type="radio" name="frequency" /> <span>One Time</span></div>
                     </div>
                     <div class="donationButton">
-                        <button onclick="payWithRave()">Go to checkout</button>
+                        <button id="modal_opener">GO TO CHECKOUT</button>
+
+                        <div class="modal" style="display: none">
+                            <div class="overlay"></div>
+                            <div class="modal_content">
+                              <!-- Dynamic Section -->
+                              <div class="donationAmount">
+                                <label>Enter your email <input type="email" id="email"></label>
+                                <label>Enter your first name <input type="text" id="firstname"></label>
+                                <label>Enter your last name <input type="text" id="lastname"></label>
+                                <label>Enter your phone number <input type="tel" id="phone"></label>
+                              </div>
+                              <div class="donationButton">
+                                    <button onclick="payWithRave()">PAY</button>
+                                </div>
+                              <!-- End of Dynamic Section -->
+                              <button title="Close" class="close_modal">
+                                <i class="fas fa-times"></i>
+                              </button>
+                            </div>
+                          </div>
                     </div>
                 </div>
                 <div class="main-info">
